@@ -1,0 +1,37 @@
+html{
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 1000px;
+    font-family: 'helvetica neue';
+}
+.cc{
+    margin: auto;
+  width: 50%;
+  padding: 10px;
+  padding-top: 20%;
+
+  text-align: center;
+}
+h1{
+    text-align:center;
+    display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.ss{
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.bu{
+    border-radius: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
