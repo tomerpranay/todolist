@@ -1,6 +1,6 @@
 const express=require('express');
 const bodyparser=require('body-parser');
-var item=["eat","sleep","study"];
+let item=["eat","sleep","study"];
 let workitems=[];
 
 const app=express();
@@ -31,13 +31,13 @@ app.get("/home",(req,res)=>{
    res.render(__dirname+"/public/views/list",{listTitle:day,itemlist:item});
 });
 app.post("/home",(req,res)=>{
-    let item = req.body.itemadd;
+    let tem = req.body.itemadd;
     if(req.body.list==="work"){
-        workitems.push(item);
+        workitems.push(tem);
         res.redirect("/work");
     } 
     else{
-    item.push(items);
+    item.push(tem);
     res.redirect("/home");
     }
 });
