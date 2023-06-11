@@ -6,9 +6,7 @@ let workitems=[];
 const app=express();
 app.set('view engine', 'ejs');
 app.use(bodyparser.urlencoded({extended:true}));
-// app.use(express.static("public"));
 app.use(express.static(__dirname + "/public/"));
-app.use(express.static(__dirname + "/views/"));
 
  app.get("/",(req,res)=>{
     res.sendFile(__dirname + "/index.html");
@@ -30,7 +28,7 @@ app.get("/home",(req,res)=>{
     day: 'numeric' 
    }
    var day=today.toLocaleDateString("en-US",option);
-   res.render("list",{listTitle:day,itemlist:item});
+   res.render(__dirname+"/public/views/list",{listTitle:day,itemlist:item});
 });
 app.post("/home",(req,res)=>{
     let item = req.body.itemadd;
@@ -45,7 +43,7 @@ app.post("/home",(req,res)=>{
 });
 
 app.get("/work",(req,res)=>{
-    res.render("list",{listTitle:"work List",itemlist:workitems});
+    res.render(__dirname+"/public/views/list",{listTitle:"work List",itemlist:workitems});
 });
 app.post("/work",(req,res)=>{
     let w=req.body.itemadd;
